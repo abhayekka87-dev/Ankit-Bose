@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gamer Lobby - Ankit</title>
+  <meta name="description" content="A gamer lobby-style personal website with dark HUD UI and immersive transitions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <header class="hud-header" role="banner">
+      <div class="hud-brand">NEXUS OPERATOR</div>
+      <nav class="hud-nav" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="#home" class="nav-link active" data-target="home">Start</a></li>
+          <li><a href="#profile" class="nav-link" data-target="profile">Profile</a></li>
+          <li><a href="#loadout" class="nav-link" data-target="loadout">Loadout</a></li>
+          <li><a href="#achievements" class="nav-link" data-target="achievements">Achievements</a></li>
+          <li><a href="#contact" class="nav-link" data-target="contact">Invite</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="lobby" role="main">
+      <section id="home" class="panel panel-hero active" data-section="home" aria-label="Start game">
+        <div class="panel-inner">
+          <h1 class="title">[ANKIT]</h1>
+          <h2 class="subtitle">WELCOME TO THE OPERATIONAL LOBBY</h2>
+          <p class="typed" aria-live="polite" id="typed-text">INITIATING...</p>
+          <div class="hud-counters">
+            <span>SERVER STATUS: ONLINE</span>
+            <span>RANK: ELITE</span>
+            <span>MISSION: READY</span>
+          </div>
+          <a href="#profile" class="btn action-btn" data-target="profile">DEPLOY</a>
+        </div>
+      </section>
+
+      <section id="profile" class="panel" data-section="profile" aria-label="Player profile">
+        <div class="panel-inner">
+          <h3 class="section-title">PLAYER PROFILE</h3>
+          <p>Elite gamer with a decade of mission-focused competitive play. I build systems, optimize loadouts, and guide squads through flagship operations. My path is driven by precision, strategy and relentless optimization.</p>
+          <div class="hud-cards">
+            <article class="hud-card">
+              <h4>Origin</h4>
+              <p>Started as an indie modder and server admin in 2015. Now playing at high tier in FPS / RPG hybrids.</p>
+            </article>
+            <article class="hud-card">
+              <h4>Specialties</h4>
+              <ul>
+                <li>Rapid target acquisition</li>
+                <li>Resource efficiency</li>
+                <li>Team command UI</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="loadout" class="panel" data-section="loadout" aria-label="Gameplay loadout">
+        <div class="panel-inner">
+          <h3 class="section-title">LOADOUT</h3>
+          <div class="hud-grid">
+            <article class="hud-card">
+              <h4>Games</h4>
+              <ul><li>Valorant</li><li>Warframe</li><li>Cyberpunk 2077</li><li>Dead Space</li></ul>
+            </article>
+            <article class="hud-card">
+              <h4>Skills</h4>
+              <ul><li>Sandbox scripting</li><li>System performance</li><li>Team strategy</li><li>UI feedback loops</li></ul>
+            </article>
+            <article class="hud-card">
+              <h4>Gear</h4>
+              <p>Custom rig, mechanical keyboard, high-freq display, low-latency audio, ergonomic controllers.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="panel" data-section="achievements" aria-label="Achievements">
+        <div class="panel-inner">
+          <h3 class="section-title">ACHIEVEMENTS</h3>
+          <div class="stat-grid">
+            <div class="stat-block"><span>1,250</span><p>Wins</p></div>
+            <div class="stat-block"><span>98%</span><p>Accuracy Rating</p></div>
+            <div class="stat-block"><span>63</span><p>High-Difficulty clears</p></div>
+            <div class="stat-block"><span>12</span><p>5-star campaigns</p></div>
+          </div>
+          <p>Key milestones: global tournament quarterfinalist, top 10 in leaderboard season finals, community mentorship with strong retention.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="panel" data-section="contact" aria-label="Contact invite">
+        <div class="panel-inner">
+          <h3 class="section-title">INVITE TO PARTY</h3>
+          <p>Ready to recruit? Send a mission invite, squad request, or collab signal. I respond quickly by default with clear CTAs.</p>
+          <div class="contact-grid">
+            <div class="hud-card">
+              <h4>Connect</h4>
+              <ul>
+                <li>Discord: <code>Ankit#0011</code></li>
+                <li>Steam: <code>@AnkitOps</code></li>
+                <li>Twitter: <code>@Ankit_X</code></li>
+              </ul>
+            </div>
+            <form id="contact-form" class="hud-card contact-form" aria-label="Contact form">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Callsign" required />
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="operator@domain.com" required />
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Mission details..." required></textarea>
+              <button type="submit" class="btn action-btn">SEND INVITE</button>
+              <p id="form-status" aria-live="polite" class="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <span class="fottermid">Developed By Ankit Bose</span>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
